@@ -67,8 +67,19 @@ Ioc容器的初始化主要包括三个过程：
 
 1.&nbsp; Resource的定位过程
 
+如前所述，DefaultListableBeanFactory定位资源的方式是：
 
+    ClassPathResource res = new ClassPathResource("bean.xml");
 
+并且该资源res还不能让DefaultListableBeanFactory直接用，需要通过XmlBeanDefinitionReader解析注册完。
+
+FileSystemXmlApplicationContext的方式则简单许多，它将定位资源、加载Bean定义、注册Bean封装好了。
+
+来看代码：
+
+（简洁起见，将IoC容器FileSystemXmlApplicationContext的代码分析放在另外一个文档：）
+
+[]
 
 ## IoC容器的依赖注入
 
