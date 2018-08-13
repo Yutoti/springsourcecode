@@ -77,9 +77,7 @@ FileSystemXmlApplicationContext的方式则简单许多，它将定位资源、�
 
 来看代码：
 
-（简洁起见，将IoC容器FileSystemXmlApplicationContext的代码分析放在另外一个文档：）
-
-[]
+（简洁起见，将IoC容器FileSystemXmlApplicationContext的[代码分析](https://github.com/Yutoti/springsourcecode/blob/master/FileSystemXmlApplicationContext.md)放在另外一个文档：）
 
 ## IoC容器的依赖注入
 
