@@ -1,4 +1,4 @@
-FileSystemXmlApplicationContext的代码分析——IoC容器的初始化
+# FileSystemXmlApplicationContext的代码分析——IoC容器的初始化
 ***
 首先，在new出FileSystemXmlApplicationContext对象时，通过传入的String，设置xml文件的位置（支持多个xml）；接着调用refresh()方法，该方法在AbstractApplicationContext中定义，是FileSystemXmlApplicationContext容器的核心方法，资源定位、加载Bean定义以及注册Bean都是在该方法中完成的。
 
@@ -76,7 +76,7 @@ FileSystemXmlApplicationContext的代码分析——IoC容器的初始化
   
   先看FileSystemXmlApplicationContext的getResource()方法的调用关系图，弄清楚这个方法是什么时候调用的：
   
-  //待插入
+  //图片待插入
   
   可以看到，在AbstractApplicationContext方法中的refresh()方法调用时，通过一系列的调用链，最终调用到getResource()方法，而在这个调用链当中，loadBeanDefinition赫然在列！我们具体看AbstractRrefrshableApplicationContext中的refreshBeanFactory()方法：
   
