@@ -1,4 +1,4 @@
-# FileSystemXmlApplicationContext的代码分析——IoC容器的初始化
+# FileSystemXmlApplicationContext代码分析——IoC容器的初始化
 ***
 首先，在new出FileSystemXmlApplicationContext对象时，通过传入的String，设置xml文件的位置（支持多个xml）；接着调用refresh()方法，该方法在AbstractApplicationContext中定义，是FileSystemXmlApplicationContext容器的核心方法，资源定位、加载Bean定义以及注册Bean都是在该方法中完成的。
 
@@ -111,4 +111,4 @@
         ...
 		}
     
-这就很清楚了，和DefaultListableBeanFactory相同，这里也有获取资源Resources、定义读取器reader、加载Bean定义、由reader注册Bean的一系列操作。spring通过继承关系良好的多个父类子类定义，自动完成了这些操作。
+这就很清楚了，和手动编程使用DefaultListableBeanFactory相同，这里也有定义读取器reader、获取资源Resources的一系列操作。spring通过继承关系良好的多个父类子类定义，自动完成了这些操作。
